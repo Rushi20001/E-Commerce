@@ -1,0 +1,9 @@
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.DataAccess\bin\Debug\OnlineShop.DataAccess.dll
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.DataAccess\bin\Debug\OnlineShop.DataAccess.pdb
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.DataAccess\bin\Debug\OnlineShop.Models.dll
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.DataAccess\bin\Debug\OnlineShop.Models.pdb
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.DataAccess\obj\Debug\OnlineShop.DataAccess.csproj.AssemblyReference.cache
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.DataAccess\obj\Debug\OnlineShop.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.DataAccess\obj\Debug\OnlineShop.DataAccess.csproj.CopyComplete
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.DataAccess\obj\Debug\OnlineShop.DataAccess.dll
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.DataAccess\obj\Debug\OnlineShop.DataAccess.pdb

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Models.Entity
 {
-    internal class FileName
+    public  class CreateOn<T>
     {
+        public T Date { get; set; }   
     }
 }

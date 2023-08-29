@@ -1,0 +1,13 @@
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop\bin\Debug\OnlineShop.exe.config
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop\bin\Debug\OnlineShop.exe
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop\bin\Debug\OnlineShop.pdb
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop\bin\Debug\OnlineShop.DataAccess.dll
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop\bin\Debug\OnlineShop.Models.dll
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop\bin\Debug\OnlineShop.DataAccess.pdb
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop\bin\Debug\OnlineShop.Models.pdb
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop\obj\Debug\OnlineShop.csproj.AssemblyReference.cache
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop\obj\Debug\OnlineShop.csproj.SuggestedBindingRedirects.cache
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop\obj\Debug\OnlineShop.csproj.CoreCompileInputs.cache
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop\obj\Debug\OnlineShop.csproj.CopyComplete
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop\obj\Debug\OnlineShop.exe
+C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop\obj\Debug\OnlineShop.pdb

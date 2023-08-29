@@ -49,5 +49,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineShop.DataAccess\OnlineShop.DataAccess.csproj">
+      <Project>{05fe9485-2d86-46b4-ad1c-6be260d39f22}</Project>
+      <Name>OnlineShop.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineShop.Models\OnlineShop.Models.csproj">
+      <Project>{712e0598-dee6-4083-b485-3635526e3c6f}</Project>
+      <Name>OnlineShop.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

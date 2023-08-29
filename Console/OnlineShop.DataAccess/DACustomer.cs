@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using OnlineShop.Models;
 
 namespace OnlineShop.DataAccess
 {
@@ -34,12 +35,13 @@ namespace OnlineShop.DataAccess
             string query = "customername";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.Add("@customerid", SqlDbType.Int).Value = 7;
+            cmd.Parameters.Add("@customerid", SqlDbType.Int).Value = 8;
             cmd.Parameters.Add("@customername", SqlDbType.VarChar).Value = "Robert";
             cmd.Parameters.Add("@customeradd", SqlDbType.VarChar).Value = "AHD";
             cmd.Parameters.Add("@phone", SqlDbType.VarChar).Value = "878589";
             cmd.Parameters.Add("@walletpoints", SqlDbType.Int).Value = 30;
             cmd.Parameters.Add("@optype", SqlDbType.VarChar).Value = "u";
+            cmd.Parameters.Add("@createon",SqlDbType.DateTime).Value= DateTime.Now;   
             sqlConnection.Open();
             int row = cmd.ExecuteNonQuery();
             sqlConnection.Close();
@@ -77,6 +79,11 @@ namespace OnlineShop.DataAccess
             sqlConnection.Open();
             int row = cmd.ExecuteNonQuery();
             sqlConnection.Close();
+        }
+
+        public void InsertCustomerSp(Customer customer)
+        {
+            throw new NotImplementedException();
         }
     }   
 }
