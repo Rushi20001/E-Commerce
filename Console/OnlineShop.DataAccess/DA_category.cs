@@ -8,47 +8,45 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.DataAccess
 {
-    public class DA_ProductType
+    public class DA_category
     {
-        public void InsertProductType()
+        public void Insertcategory()
         {
-            // Create connection string and assing to class
+     
             SqlConnection sqlConnetion = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlConnection"].ToString());
 
-            // Generate Query
-            string query = "Insert into ProductType values ('books')";
-            // string query = "insertlookuptype";
-            //Create Command
+         
+            string query = "Insert into category values ('books')";
+          
             SqlCommand cmd = new SqlCommand(query, sqlConnetion);
-            //cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            //cmd.Parameters.Add("@lookupTypename", SqlDbType.VarChar).Value = "Added By SP";
+        
             sqlConnetion.Open();
             int rowaffected = cmd.ExecuteNonQuery();
 
             sqlConnetion.Close();
         }
-        public void RetreiveProductType()
+        public void Retreivecategory()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "select top 1 TypeName from ProductType";
+            string query = "select top 1 categoryName from category";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             string row = Convert.ToString(cmd.ExecuteScalar());
             sqlConnection.Close();
         }
-        public void UpdateProductType()
+        public void Updatecategory()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "update ProductType set TypeName='home appliances' where ProductTypeId=106";
+            string query = "update category set categoryName='home appliances' where categoryId=106";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             int row = cmd.ExecuteNonQuery();
             sqlConnection.Close();
         }
-        public void DeleteProductType()
+        public void Deletecategory()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlConnection"].ToString());
-            string query = "delete from ProductType where ProductTypeId=108 ";
+            string query = "delete from category where categoryId=108 ";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             int row = cmd.ExecuteNonQuery();

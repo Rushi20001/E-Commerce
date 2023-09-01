@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Models
 {
-    public  class PaymentType
+    public class login
     {
-        public int PaymentTypeId { get; set; }
-
-        public string PaymentTypeName { get; set; }
+       public int id { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
     }
 }

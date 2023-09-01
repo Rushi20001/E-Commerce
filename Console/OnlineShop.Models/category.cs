@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Models
 {
-    public class CartHistory : CreateOn<DateTime>
+    public class category : CreateOn
     {
-       public int  CartId { get; set; }
-      //public DateTime PurchaseDate { get; set; }
-     public int orderdetailsid { get; set; }
+        public int categoryId { get; set; }
+       public string categoryName { get; set; }
     }
 }

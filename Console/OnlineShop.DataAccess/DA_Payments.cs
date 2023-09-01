@@ -8,49 +8,48 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.DataAccess
 {
-    public class DA_ProductTable
+    public class DA_Payments
     {
-        public void InsertProductTable()
+        public void InsertPayment()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "insert into ProductTable ( ProductTypeId,ProductName,Amount) values (104,'Laptop',40000)";
+            string query = "insert into Payments ( userid,orderid,paymentdate ,paymentamount, paymentMethod)" +
+                " values (4,308,getdate(),0,'COD')";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             int row = cmd.ExecuteNonQuery();
             sqlConnection.Close();
-            if (row > 0) { Console.Write("row inserted"); }
         }
+        public void UpdatePayment()
+        {
+            SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
+            string query = "update Payments set paymentdate=getdate() where PaymentId=1003";
+            SqlCommand cmd = new SqlCommand(query, sqlConnection);
+            sqlConnection.Open();
+            cmd.ExecuteNonQuery();
+            sqlConnection.Close();
+        }
+        public void DeletePayment()
+        {
+            SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
+            string query = "delete from  Payments where Payments=1001";
+            SqlCommand cmd = new SqlCommand(query, sqlConnection);
+            sqlConnection.Open();
+            cmd.ExecuteNonQuery();
+            sqlConnection.Close();
+        }
+        public void getPayment()
+        {
+            SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
+            string query = "select * from Payments";
+            SqlCommand cmd = new SqlCommand(query, sqlConnection);
+            sqlConnection.Open();
 
-        public void UpdateProductTable()
-        {
-            SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "update producttable set productname='Trousers' where productid=202";
-            SqlCommand cmd = new SqlCommand(query, sqlConnection);
-            sqlConnection.Open();
-            cmd.ExecuteNonQuery();
-            sqlConnection.Close();
-        }
-        public void deleteProductTable()
-        {
-            SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "delete from ProductTable where productid=207";
-            SqlCommand cmd = new SqlCommand(query, sqlConnection);
-            sqlConnection.Open();
-            cmd.ExecuteNonQuery();
-            sqlConnection.Close();
-        }
-        public void retreiveProductTable()
-        {
-            SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "select * from Producttable";
-            SqlCommand cmd = new SqlCommand(query, sqlConnection);
-            sqlConnection.Open();
-            //   string a= Convert.ToString(cmd.ExecuteReader());
             SqlDataReader r = cmd.ExecuteReader();
 
             while (r.Read())
             {
-                Console.WriteLine("Id:" + r["productid"] + " " + "ProductName:" + r["ProductName"] + "   " + "Amount:" + r["amount"]);
+                Console.WriteLine("Id:" + r["Paymentsid"]  + "Paymentmethod:" + r["PaymentTypeName"]);
             }
             sqlConnection.Close();
         }

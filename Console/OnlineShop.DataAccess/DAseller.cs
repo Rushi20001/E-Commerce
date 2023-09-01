@@ -1,5 +1,4 @@
-﻿using OnlineShop.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -9,48 +8,42 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.DataAccess
 {
-    public class DA_CartHistory
+    public class DAseller
     {
-        public void Insertcart()
+        public void insert_seller()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "insert into CartHistory ( PurchaseDate,orderdetailsID) values ()";
+            string query = "insert into seller ( sellrName,sellerEmail,sellerPass,sellerAddress,sellerContact) values ()";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             int row = cmd.ExecuteNonQuery();
             sqlConnection.Close();
         }
-        public void Updatecart()
+        public void update_seller()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "update CartHistory set PurchaseDate='2023-08-23' where CartId=501";
+            string query = "update seller set sellername='croma' where sellerid=51 ";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
-            cmd.ExecuteNonQuery();
+            int row = cmd.ExecuteNonQuery();
             sqlConnection.Close();
         }
-        public void Deletecart()
+        public void delete_seller()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "delete from  CartHistory where CartId=508";
+            string query = "delete from seller where sellerid=51";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
-            cmd.ExecuteNonQuery();
+            int row = cmd.ExecuteNonQuery();
             sqlConnection.Close();
         }
-        public void getCarthistory()
+        public void getSeller()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "select * from CartHistory";
+            string query = "select top 1 sellerid from seller";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
-
-            SqlDataReader r = cmd.ExecuteReader();
-
-            while (r.Read())
-            {
-                Console.WriteLine("Id:" + r["CartId"] + " " + "PurchaseDate:" + r["PurchaseDate"] + "   " + "orderDetailsID:" + r["orderDetailsID"]);
-            }
+            string row = Convert.ToString(cmd.ExecuteScalar());
             sqlConnection.Close();
         }
     }

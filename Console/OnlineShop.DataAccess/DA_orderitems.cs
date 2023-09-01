@@ -1,57 +1,60 @@
-﻿using System;
+﻿using OnlineShop.Models;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace OnlineShop.DataAccess
 {
-    public class DA_orderDetails
+    public class DA_orderitems
     {
-       
-
-
-        public void InsertorderDetails()
+        public void Insertorderitems()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "insert into orderDetails ( CustomerId,productId,PaymentMethod,PaymentDate,totalbill) values ()";
+            string query = "insert into orderitems ( orderid,productID,quantity,price) values (305,202,5,500)";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             int row = cmd.ExecuteNonQuery();
             sqlConnection.Close();
         }
-        public void UpdateorderDetails()
+        public void Updateorderitems()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "update orderDetails set quantity=1";
+            string query = "update orderitems set createon=getdate() where orderitemId=508";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             cmd.ExecuteNonQuery();
             sqlConnection.Close();
         }
-        public void DeleteorderDetails()
+        public void Deletecart()
         {
-            Console.WriteLine( "Enter Id:" );
-            int id = Convert.ToInt32(Console.ReadLine());
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "delete from orderDetails where orderDetailsid=@id";
+            string query = "delete from  orderitems where orderitemId=508";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
-            cmd.Parameters.AddWithValue("@id", id);  
             sqlConnection.Open();
-            cmd.ExecuteScalar();
+            cmd.ExecuteNonQuery();
             sqlConnection.Close();
         }
-
-        public void getorderDetails()
+        public void getCarthistory()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "select top 1 totalbill from orderDetails";
+            string query = "select * from orderitems";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
-            string row = Convert.ToString(cmd.ExecuteScalar());
+
+            SqlDataReader r = cmd.ExecuteReader();
+
+            while (r.Read())
+            {
+                Console.WriteLine("Id:" + r["orderitemId"] + " " + "orderid:" + r["orderid"] + "   " 
+                    + "productID:" + r["productID"]
+                    + "quantity:" + r["quantity"] + "price:" + r["price"] 
+
+                    );
+            }
             sqlConnection.Close();
         }
     }

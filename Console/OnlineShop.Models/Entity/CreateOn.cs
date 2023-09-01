@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Models.Entity
 {
-    public  class CreateOn<T>
+    public  class CreateOn
     {
-        public T Date { get; set; }   
+        public DateTime Date { get; set; }   
     }
 }

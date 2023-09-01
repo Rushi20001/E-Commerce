@@ -4,3 +4,9 @@ C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.Models\obj\Debug\Onlin
 C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.Models\obj\Debug\OnlineShop.Models.csproj.CoreCompileInputs.cache
 C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.Models\obj\Debug\OnlineShop.Models.dll
 C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.Models\obj\Debug\OnlineShop.Models.pdb
+D:\OnlineShop\E-Commerce\Console\OnlineShop.Models\bin\Debug\OnlineShop.Models.dll
+D:\OnlineShop\E-Commerce\Console\OnlineShop.Models\bin\Debug\OnlineShop.Models.pdb
+D:\OnlineShop\E-Commerce\Console\OnlineShop.Models\obj\Debug\OnlineShop.Models.csproj.AssemblyReference.cache
+D:\OnlineShop\E-Commerce\Console\OnlineShop.Models\obj\Debug\OnlineShop.Models.csproj.CoreCompileInputs.cache
+D:\OnlineShop\E-Commerce\Console\OnlineShop.Models\obj\Debug\OnlineShop.Models.dll
+D:\OnlineShop\E-Commerce\Console\OnlineShop.Models\obj\Debug\OnlineShop.Models.pdb

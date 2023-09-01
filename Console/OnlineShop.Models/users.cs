@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Models
 {
-    public class Customer : CreateOn<DateTime>
+    public class users : CreateOn
     {
-    public int   CustomerId { get; set; }
-     public string CustomerName { get; set; }
-    public string   CustomerAddress { get; set; }
+    public int   userId { get; set; }
+     public string userName { get; set; }
+        public string password { get; set; }
+    public string   Email { get; set; }
+      public string address { get; set; }
       public string PhoneNo { get; set; }
-      public int walletpoints { get; set; }
     
     }
 }

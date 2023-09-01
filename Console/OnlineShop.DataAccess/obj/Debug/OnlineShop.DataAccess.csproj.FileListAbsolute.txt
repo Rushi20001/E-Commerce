@@ -7,3 +7,12 @@ C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.DataAccess\obj\Debug\O
 C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.DataAccess\obj\Debug\OnlineShop.DataAccess.csproj.CopyComplete
 C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.DataAccess\obj\Debug\OnlineShop.DataAccess.dll
 C:\Users\rushi.rajwade\source\repos\OnlineShop\OnlineShop.DataAccess\obj\Debug\OnlineShop.DataAccess.pdb
+D:\OnlineShop\E-Commerce\Console\OnlineShop.DataAccess\bin\Debug\OnlineShop.DataAccess.dll
+D:\OnlineShop\E-Commerce\Console\OnlineShop.DataAccess\bin\Debug\OnlineShop.DataAccess.pdb
+D:\OnlineShop\E-Commerce\Console\OnlineShop.DataAccess\bin\Debug\OnlineShop.Models.dll
+D:\OnlineShop\E-Commerce\Console\OnlineShop.DataAccess\bin\Debug\OnlineShop.Models.pdb
+D:\OnlineShop\E-Commerce\Console\OnlineShop.DataAccess\obj\Debug\OnlineShop.DataAccess.csproj.AssemblyReference.cache
+D:\OnlineShop\E-Commerce\Console\OnlineShop.DataAccess\obj\Debug\OnlineShop.DataAccess.csproj.CoreCompileInputs.cache
+D:\OnlineShop\E-Commerce\Console\OnlineShop.DataAccess\obj\Debug\OnlineShop.DataAccess.csproj.CopyComplete
+D:\OnlineShop\E-Commerce\Console\OnlineShop.DataAccess\obj\Debug\OnlineShop.DataAccess.dll
+D:\OnlineShop\E-Commerce\Console\OnlineShop.DataAccess\obj\Debug\OnlineShop.DataAccess.pdb
