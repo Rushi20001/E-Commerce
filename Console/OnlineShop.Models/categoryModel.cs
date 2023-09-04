@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Models
 {
-    public class category : CreateOn
+    public class categoryModel : CreateOn
     {
         public int categoryId { get; set; }
        public string categoryName { get; set; }

@@ -14,10 +14,10 @@ namespace OnlineShop.DataAccess
        
 
 
-        public void InsertorderDetails()
+        public void Insertorders()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "insert into orders (  userId,orderdate,status) values (4,getdate(),1)";
+            string query = "insert into orders ( customerid,orderdate,orderstatus,createon) values ()";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             int row = cmd.ExecuteNonQuery();
@@ -26,7 +26,7 @@ namespace OnlineShop.DataAccess
         public void Updateorders()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "update orders set status=1 where orderid=301";
+            string query = "update orders set status=1 where orderid=501";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             cmd.ExecuteNonQuery();
@@ -48,7 +48,7 @@ namespace OnlineShop.DataAccess
         public void getorders()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "select top 1 userid from orders";
+            string query = "select top 1 customerid from orders";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             string row = Convert.ToString(cmd.ExecuteScalar());

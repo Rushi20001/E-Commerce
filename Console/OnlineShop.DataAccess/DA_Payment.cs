@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.DataAccess
 {
-    public class DA_Payments
+    public class DA_Payment
     {
         public void InsertPayment()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "insert into Payments ( userid,orderid,paymentdate ,paymentamount, paymentMethod)" +
-                " values (4,308,getdate(),0,'COD')";
+            string query = "insert into Payment ( ordersid,payamount , paymentMethodid,createon)" +
+                " values ()";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             int row = cmd.ExecuteNonQuery();
@@ -23,7 +23,7 @@ namespace OnlineShop.DataAccess
         public void UpdatePayment()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "update Payments set paymentdate=getdate() where PaymentId=1003";
+            string query = "update Payments set createon=getdate()  where PaymentId=1003";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             cmd.ExecuteNonQuery();
@@ -32,7 +32,7 @@ namespace OnlineShop.DataAccess
         public void DeletePayment()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "delete from  Payments where Payments=1001";
+            string query = "delete from  Payment where Payments=1003";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             cmd.ExecuteNonQuery();
@@ -41,7 +41,7 @@ namespace OnlineShop.DataAccess
         public void getPayment()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "select * from Payments";
+            string query = "select * from Payment";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
 
@@ -49,7 +49,7 @@ namespace OnlineShop.DataAccess
 
             while (r.Read())
             {
-                Console.WriteLine("Id:" + r["Paymentsid"]  + "Paymentmethod:" + r["PaymentTypeName"]);
+                Console.WriteLine("Id:" + r["Paymentid"]  + "ordersid:" + r["ordersid"] + "payamount:" + r["payamount"]);
             }
             sqlConnection.Close();
         }

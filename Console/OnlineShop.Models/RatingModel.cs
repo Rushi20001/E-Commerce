@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Models
 {
-    public class Rating
+    public class RatingModel
     { 
         public int RatingId { get; set; }
         public int userid { get; set; }

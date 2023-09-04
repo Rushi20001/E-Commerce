@@ -27,10 +27,10 @@ namespace OnlineShop
             //obj.UpdateCustomerSp();
             //DA_orderDetails dA_OrderDetails = new DA_orderDetails();
             //dA_OrderDetails.UpdateorderDetails();
-         //  DAusers dAusers = new DAusers();
-           // dAusers.InsertuserSp();
-         DAusers ob=new DAusers();
-            ob.InsertuserSp();
+            //  DAusers dAusers = new DAusers();
+            // dAusers.InsertuserSp();
+              DAusers dAusers = new DAusers();
+            dAusers.GetCustomerSp();
             Console.ReadKey();
         }
     }

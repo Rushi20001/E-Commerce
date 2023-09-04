@@ -9,21 +9,21 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.DataAccess
 {
-    public class DA_orderitems
+    public class DA_orderdetails
     {
-        public void Insertorderitems()
+        public void Insertorderdetails()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "insert into orderitems ( orderid,productID,quantity,price) values (305,202,5,500)";
+            string query = "insert into orderdetails ( ordersid,productID,quantity,price_per_unit,totalprice,createon) values ()";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             int row = cmd.ExecuteNonQuery();
             sqlConnection.Close();
         }
-        public void Updateorderitems()
+        public void Updateorderdetails()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "update orderitems set createon=getdate() where orderitemId=508";
+            string query = "update orderitems set createon=getdate() where orderitemId=1";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             cmd.ExecuteNonQuery();
@@ -32,7 +32,7 @@ namespace OnlineShop.DataAccess
         public void Deletecart()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "delete from  orderitems where orderitemId=508";
+            string query = "delete from  orderitems where orderitemId=1";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             cmd.ExecuteNonQuery();
@@ -41,7 +41,7 @@ namespace OnlineShop.DataAccess
         public void getCarthistory()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "select * from orderitems";
+            string query = "select * from orderdetails";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
 
@@ -49,9 +49,9 @@ namespace OnlineShop.DataAccess
 
             while (r.Read())
             {
-                Console.WriteLine("Id:" + r["orderitemId"] + " " + "orderid:" + r["orderid"] + "   " 
+                Console.WriteLine("Id:" + r["orderdetailsId"] + " " + "orderid:" + r["ordersid"] + "   " 
                     + "productID:" + r["productID"]
-                    + "quantity:" + r["quantity"] + "price:" + r["price"] 
+                    + "quantity:" + r["quantity"] + "price:" + r["price_per_unit"] 
 
                     );
             }

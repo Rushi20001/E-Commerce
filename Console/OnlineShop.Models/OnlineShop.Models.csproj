@@ -41,17 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="orderitems.cs" />
-    <Compile Include="seller.cs" />
-    <Compile Include="users.cs" />
+    <Compile Include="orderdetailsModel.cs" />
+    <Compile Include="paymentmethodModel.cs" />
+    <Compile Include="sellerModel.cs" />
+    <Compile Include="usersModel.cs" />
     <Compile Include="Entity\CreateOn.cs" />
     <Compile Include="login.cs" />
-    <Compile Include="orders.cs" />
-    <Compile Include="Payments.cs" />
-    <Compile Include="Products.cs" />
-    <Compile Include="category.cs" />
+    <Compile Include="ordersModel.cs" />
+    <Compile Include="PaymentModel.cs" />
+    <Compile Include="ProductsModel.cs" />
+    <Compile Include="categoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rating.cs" />
+    <Compile Include="RatingModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

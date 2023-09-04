@@ -13,7 +13,7 @@ namespace OnlineShop.DataAccess
         public void InsertProduct()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "insert into Products ( categoryid, sellerid,productname,price,stock) values ()";
+            string query = "insert into Products ( productname,price,stock,categoryid,sellerid,createon) values ()";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             int row = cmd.ExecuteNonQuery();
@@ -24,7 +24,7 @@ namespace OnlineShop.DataAccess
         public void UpdateProducts()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "update products set productname='Trousers' where productid=202";
+            string query = "update products set stock=20 where productsid=53";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             cmd.ExecuteNonQuery();
@@ -33,7 +33,7 @@ namespace OnlineShop.DataAccess
         public void deleteProductTable()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "delete from Products where productid=203";
+            string query = "delete from Products where productsid=";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             cmd.ExecuteNonQuery();
@@ -50,7 +50,7 @@ namespace OnlineShop.DataAccess
 
             while (r.Read())
             {
-                Console.WriteLine("Id:" + r["productid"] + " " + "categoryid:" + r["categoryid"] + "   " + 
+                Console.WriteLine("Id:" + r["productsid"] + " " + "categoryid:" + r["categoryid"] + "   " + 
                     "sellerid:" + r["sellerid"] +
                     "productname:" + r["productname"] + "price:" + r["price"] +
                     "stock:" + r["stock"]);

@@ -16,7 +16,7 @@ namespace OnlineShop.DataAccess
             SqlConnection sqlConnetion = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlConnection"].ToString());
 
          
-            string query = "Insert into category values ('books')";
+            string query = "Insert into category values ('AC')";
           
             SqlCommand cmd = new SqlCommand(query, sqlConnetion);
         

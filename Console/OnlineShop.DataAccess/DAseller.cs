@@ -13,7 +13,8 @@ namespace OnlineShop.DataAccess
         public void insert_seller()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "insert into seller ( sellrName,sellerEmail,sellerPass,sellerAddress,sellerContact) values ()";
+            string query = "insert into seller ( sellerName,sellerAddress,sellerPhone,sellerEmail,sellerpass,CreatedON) values " +
+                "('sony','gurgaon','555-88','sony@g.com','sony1',getdate())";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             int row = cmd.ExecuteNonQuery();
@@ -22,7 +23,7 @@ namespace OnlineShop.DataAccess
         public void update_seller()
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconnection"].ToString());
-            string query = "update seller set sellername='croma' where sellerid=51 ";
+            string query = "update seller set sellername='sony' where sellerid=1 ";
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
             int row = cmd.ExecuteNonQuery();

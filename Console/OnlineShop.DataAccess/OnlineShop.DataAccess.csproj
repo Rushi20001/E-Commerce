@@ -45,10 +45,11 @@
     <Compile Include="DAusers.cs" />
     <Compile Include="DA_orderitems.cs" />
     <Compile Include="DA_orders.cs" />
-    <Compile Include="DA_Payments.cs" />
+    <Compile Include="DA_Payment.cs" />
     <Compile Include="DA_Products.cs" />
     <Compile Include="DA_category.cs" />
     <Compile Include="DA_rating.cs" />
+    <Compile Include="DApaymentmethod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DAseller.cs" />
   </ItemGroup>
