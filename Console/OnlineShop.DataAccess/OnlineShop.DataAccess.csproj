@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAusers.cs" />
-    <Compile Include="DA_orderitems.cs" />
+    <Compile Include="DA_orderidetails.cs" />
     <Compile Include="DA_orders.cs" />
     <Compile Include="DA_Payment.cs" />
     <Compile Include="DA_Products.cs" />

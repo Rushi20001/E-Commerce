@@ -9,12 +9,12 @@ namespace OnlineShop.Models
 {
     public class usersModel : CreateOn
     {
-    public int   userId { get; set; }
-     public string userName { get; set; }
-        public string password { get; set; }
-    public string   Email { get; set; }
-      public string address { get; set; }
-      public string PhoneNo { get; set; }
+    public int   usersId { get; set; }
+     public string usersName { get; set; }
+        public string userpass { get; set; }
+    public string   userEmail { get; set; }
+      public string usersaddress { get; set; }
+      public string userPhoneNo { get; set; }
     
     }
 }
